@@ -1,15 +1,24 @@
 ---
-- name: install apache2 and deploy website
-  hosts: all
+- name: Install Apache on Ubuntu
+  hosts: your_target_server
   become: yes
+  
   tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
     - name: Install Apache
-      ansible.builtin.apt:
+      apt:
         name: apache2
         state: present
+    
     - name: copy html
       ansible.builtin.copy:
         src: index.html
         dest: /var/www/html/
 
- 
+    - name: Start Apache service
+      service:
+        name: apache2
+        state: started
