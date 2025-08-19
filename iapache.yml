@@ -24,5 +24,5 @@
         dest: "/var/www/html/index.html"
         owner: ansadmin
         group: ansadmin
-        mode: '7777'
+        mode: '0644'
         state: link
