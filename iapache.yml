@@ -20,6 +20,6 @@
         state: absent
     - name: Copy file
       ansible.builtin.file:
-        src: '/tmp/my_repo_clone/index.html'
-        dest: '/var/www/html/'
-        
+        src: "/tmp/my_repo_clone/index.html"
+        dest: "/var/www/html/"
+        state: link
