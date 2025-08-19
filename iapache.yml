@@ -1,19 +1,10 @@
 ---
-- name: Install Apache
+- name: Create file
   hosts: all
   become: yes
   tasks:
     - name: Install Apache
-      ansible.builtin.package:
-        name: apache2
-        state: present
-    - name: copy html
-      ansible.builtin.copy:
-        src: index.html
-        dest: /var/www/html/index.html # Specify the full path to the file
-      notify: restart apache
-  handlers:
-    - name: restart apache
-      ansible.builtin.service:
-        name: apache2
-        state: restarted
+      ansible.builtin.file:
+        name: file1.txt
+        state: touch
+ 
