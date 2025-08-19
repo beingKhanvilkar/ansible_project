@@ -25,3 +25,4 @@
         owner: ansadmin
         group: ansadmin
         mode: '7777'
+        state: link
