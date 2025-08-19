@@ -21,7 +21,7 @@
     - name: Copy file
       ansible.builtin.file:
         src: "/tmp/my_repo_clone/index.html"
-        dest: "/var/www/html/"
+        dest: "/var/www/html/index.html"
         owner: ansadmin
         group: ansadmin
         mode: '7777'
