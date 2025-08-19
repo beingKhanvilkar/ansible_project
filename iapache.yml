@@ -14,9 +14,14 @@
         dest: '/tmp/my_repo_clone' # Temporary directory for cloning
         version: main # Or the specific branch/tag you want
         force: yes # Overwrite if directory exists
+    - name: remove file
+      ansible.builtin.file:
+        name: index.html
+        path: '/var/www/html/index.html'
+        state: absent
     - name: Copy file
       ansible.builtin.file:
         name: index.html
         src: '/tmp/my_repo_clone/index.html'
         dest: '/var/www/html/'
-        state: link
+        state: present
