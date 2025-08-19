@@ -1,10 +1,10 @@
 ---
-- name: Install unzip
+- name: Install docker
   hosts: all
   become: yes
   tasks:
-    - name: Install unzip
+    - name: Install docker
       ansible.builtin.package:
-        name: unzip
+        name: docker.io
         state: present
   
