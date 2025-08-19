@@ -16,8 +16,7 @@
         force: yes # Overwrite if directory exists
     - name: remove file
       ansible.builtin.file:
-        name: index.html
-        path: '/var/www/html/index.html'
+        path: /var/www/html/index.html
         state: absent
 #    - name: Copy file
  #     ansible.builtin.file:
