@@ -19,9 +19,9 @@
         name: index.html
         path: '/var/www/html/index.html'
         state: absent
-    - name: Copy file
-      ansible.builtin.file:
-        name: index.html
-        src: '/tmp/my_repo_clone/index.html'
-        dest: '/var/www/html/'
-        state: present
+#    - name: Copy file
+ #     ansible.builtin.file:
+  #      name: index.html
+   #     src: '/tmp/my_repo_clone/index.html'
+    #    dest: '/var/www/html/'
+     #   state: present
