@@ -8,8 +8,14 @@
         name: apache2
         update_cache: yes
         state: present
+    - name: Clone the GitHub repository
+      ansible.builtin.git:
+        repo: 'https://github.com/beingKhanvilkar/ansible_project.git' # Replace with your repository URL
+        dest: '/tmp/my_repo_clone' # Temporary directory for cloning
+        version: main # Or the specific branch/tag you want
+        force: yes # Overwrite if directory exists
     - name: Copy file
       ansible.builtin.file:
         name: index.html
-        src: index.html
+        src: /tmp/my_repo_clone/index.html
         dest: /var/www/html/
