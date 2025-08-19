@@ -18,4 +18,4 @@ ansiblePlaybook credentialsId: 'ec2-user', disableHostKeyChecking: true, install
   
   }
 }
-}
+
