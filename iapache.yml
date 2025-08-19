@@ -22,4 +22,6 @@
       ansible.builtin.file:
         src: "/tmp/my_repo_clone/index.html"
         dest: "/var/www/html/"
-        state: link
+        owner: ansadmin
+        group: ansadmin
+        mode: '7777'
