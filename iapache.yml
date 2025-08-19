@@ -9,7 +9,7 @@
         update_cache: yes
         state: present
     - name: Copy file
-      ansible.builtin.copy:
+      ansible.builtin.file:
         name: index.html
         src: index.html
         dest: /var/www/html/
