@@ -1,10 +1,10 @@
 ---
-- name: Install docker
+- name: Install apache
   hosts: all
   become: yes
   tasks:
-    - name: Install docker
+    - name: Install apache
       ansible.builtin.package:
-        name: docker.io
+        name: apache2
         state: present
   
